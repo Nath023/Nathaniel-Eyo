@@ -2,43 +2,70 @@ import { motion } from "motion/react";
 import { SEO } from "../components/SEO";
 import { Link } from "react-router-dom";
 import { projects } from "../data/projects";
-import { ArrowRight } from "lucide-react";
 
 export default function Work() {
   return (
     <motion.div 
-      initial={{ opacity: 0, y: 10 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.5 }}
-      className="flex flex-col gap-12"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 0.8 }}
+      className="flex flex-col gap-12 pb-16 pt-32"
     >
-      <SEO title="Work" />
+      <SEO title="Selected Work" />
       
-      <header className="flex flex-col gap-4 max-w-2xl">
-        <h1 className="font-serif text-4xl md:text-5xl">Selected Work</h1>
-        <p className="text-xl text-zinc-600 font-light leading-relaxed">
-          A collection of digital products, platforms, and business systems I've built.
+      <header className="flex flex-col gap-6 max-w-4xl relative">
+        <div className="absolute -top-16 -left-16 w-32 h-32 pattern-grid opacity-30 pointer-events-none -z-10" />
+        <span className="font-mono text-xs uppercase tracking-widest text-muted">Portfolio Index</span>
+        <h1 className="font-serif text-5xl md:text-7xl italic leading-tight">
+          Selected Work
+        </h1>
+        <p className="text-xl text-muted font-light leading-relaxed max-w-2xl">
+          A collection of digital products, platforms, and business systems I've architected and built.
         </p>
       </header>
 
-      <div className="grid md:grid-cols-2 gap-12 lg:gap-16 mt-8">
+      <div className="flex flex-col gap-32 mt-16 relative">
+        <div className="absolute left-8 md:left-1/2 top-0 bottom-0 w-px bg-border -z-10" />
+
         {projects.map((project, index) => (
-          <Link key={project.slug} to={`/projects/${project.slug}`} className="group flex flex-col gap-6">
-            <div className="aspect-[4/3] bg-zinc-50 pattern-grid rounded-3xl overflow-hidden border border-zinc-200/50 flex items-center justify-center p-8 transition-all group-hover:shadow-md group-hover:border-zinc-300 relative">
-              <div className="absolute inset-0 bg-gradient-to-t from-zinc-50/50 to-transparent" />
-              <span className="text-zinc-500 font-serif italic text-center relative z-10 bg-white/80 px-4 py-2 rounded-full border border-zinc-200/50 text-sm backdrop-blur-sm shadow-sm">Image Placeholder: {project.title}</span>
-            </div>
-            <div className="flex flex-col gap-2">
-              <div className="flex items-center gap-3">
-                <h2 className="font-serif text-2xl font-semibold text-zinc-900">{project.title}</h2>
-                <span className="text-xs font-medium px-2 py-1 bg-zinc-100 text-zinc-600 rounded-md">{project.year}</span>
+          <motion.div 
+            key={project.slug} 
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 0.8 }}
+            className={`grid md:grid-cols-2 gap-8 md:gap-16 items-center ${index % 2 === 1 ? 'md:[direction:rtl]' : ''}`}
+          >
+            <Link to={`/projects/${project.slug}`} className={`group block overflow-hidden rounded-2xl bg-surface relative aspect-[4/3] w-full ${index % 2 === 1 ? 'md:[direction:ltr]' : ''}`}>
+              <div className="absolute inset-0 bg-border/20 group-hover:bg-transparent transition-colors z-10" />
+              <div className="absolute inset-0 pattern-dots opacity-20 group-hover:scale-110 transition-transform duration-1000" />
+              
+              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 font-serif italic text-2xl text-muted mix-blend-multiply opacity-50 z-0">
+                Project Visual
               </div>
-              <p className="text-zinc-600 leading-relaxed">{project.shortDescription}</p>
-              <div className="flex items-center gap-1 text-sm font-medium text-zinc-900 mt-2 group-hover:underline underline-offset-4">
-                Read case study <ArrowRight className="w-4 h-4" />
+
+              <div className="absolute bottom-0 left-0 w-full p-6 bg-gradient-to-t from-black/60 to-transparent z-20 flex gap-2">
+                {project.technologies.slice(0,3).map(tech => (
+                  <span key={tech} className="bg-white/10 backdrop-blur-md text-white border border-white/20 text-[10px] font-mono px-2 py-1 rounded-sm uppercase tracking-wider">{tech}</span>
+                ))}
               </div>
+            </Link>
+
+            <div className={`flex flex-col gap-6 ${index % 2 === 1 ? 'md:[direction:ltr]' : ''}`}>
+              <div className="flex items-center gap-4">
+                <span className="font-mono text-sm text-muted">0{index + 1}</span>
+                <div className="h-px bg-border flex-1" />
+                <span className="font-mono text-xs uppercase tracking-widest text-muted">{project.year}</span>
+              </div>
+              
+              <h2 className="font-serif text-4xl md:text-5xl text-ink leading-tight">{project.title}</h2>
+              <p className="text-muted text-lg leading-relaxed">{project.shortDescription}</p>
+              
+              <Link to={`/projects/${project.slug}`} className="font-mono text-xs uppercase tracking-widest text-ink hover:text-accent transition-colors w-fit mt-4 pb-1 border-b border-ink hover:border-accent">
+                Read Case Study
+              </Link>
             </div>
-          </Link>
+          </motion.div>
         ))}
       </div>
     </motion.div>

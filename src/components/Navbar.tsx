@@ -7,28 +7,26 @@ import { profile } from "../data/profile";
 
 const links = [
   { name: "Home", path: "/" },
-  { name: "About", path: "/about" },
   { name: "Work", path: "/work" },
+  { name: "About", path: "/about" },
   { name: "Writing", path: "/writing" },
   { name: "Lab", path: "/lab" },
   { name: "Now", path: "/now" },
-  { name: "Contact", path: "/contact" },
 ];
 
 export function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
-
   const toggleMenu = () => setIsOpen(!isOpen);
 
   return (
-    <header className="sticky top-0 z-50 w-full bg-zinc-50/80 backdrop-blur-md border-b border-zinc-200/50 print:hidden">
-      <div className="max-w-5xl mx-auto px-6 h-16 flex items-center justify-between">
+    <header className="fixed top-4 left-1/2 -translate-x-1/2 z-50 w-[calc(100%-2rem)] max-w-5xl print:hidden">
+      <div className="bg-surface/80 backdrop-blur-xl border border-border/60 shadow-[0_4px_30px_rgba(0,0,0,0.05)] rounded-2xl px-5 h-14 flex items-center justify-between">
         <NavLink 
           to="/" 
           onClick={() => setIsOpen(false)}
-          className="font-serif italic font-semibold text-lg tracking-wide hover:opacity-70 transition-opacity z-50 relative"
+          className="font-serif italic text-2xl tracking-tight hover:opacity-70 transition-opacity z-50 relative flex items-center h-full"
         >
-          {profile.identity.name}.
+          N.E.
         </NavLink>
         
         <nav className="hidden md:flex items-center gap-6">
@@ -38,18 +36,35 @@ export function Navbar() {
               to={link.path}
               className={({ isActive }) =>
                 cn(
-                  "text-sm font-medium transition-colors hover:text-zinc-900",
-                  isActive ? "text-zinc-900" : "text-zinc-500"
+                  "text-[13px] font-mono tracking-tight transition-colors hover:text-ink relative py-4",
+                  isActive ? "text-ink" : "text-muted"
                 )
               }
             >
-              {link.name}
+              {({ isActive }) => (
+                <>
+                  {link.name}
+                  {isActive && (
+                    <motion.div
+                      layoutId="nav-indicator"
+                      className="absolute bottom-[10px] left-1/2 -translate-x-1/2 w-1 h-1 rounded-full bg-accent"
+                      transition={{ type: "spring", stiffness: 400, damping: 30 }}
+                    />
+                  )}
+                </>
+              )}
             </NavLink>
           ))}
+          <NavLink
+            to="/contact"
+            className="text-[13px] font-mono tracking-tight px-4 py-2 rounded-full bg-ink text-base hover:bg-accent hover:text-white transition-all ml-2"
+          >
+            Contact
+          </NavLink>
         </nav>
 
         <button 
-          className="md:hidden flex items-center justify-center p-2 -mr-2 z-50 relative text-zinc-900"
+          className="md:hidden flex items-center justify-center p-2 -mr-2 z-50 relative text-ink"
           onClick={toggleMenu}
           aria-label="Toggle menu"
         >
@@ -60,21 +75,22 @@ export function Navbar() {
       <AnimatePresence>
         {isOpen && (
           <motion.div
-            initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -20 }}
-            className="absolute top-16 left-0 w-full bg-zinc-50 border-b border-zinc-200/50 shadow-lg md:hidden overflow-hidden"
+            initial={{ opacity: 0, scale: 0.95, y: -10 }}
+            animate={{ opacity: 1, scale: 1, y: 0 }}
+            exit={{ opacity: 0, scale: 0.95, y: -10 }}
+            transition={{ type: "spring", stiffness: 400, damping: 30 }}
+            className="absolute top-16 left-0 w-full bg-surface/95 backdrop-blur-2xl border border-border/60 shadow-2xl rounded-2xl md:hidden overflow-hidden"
           >
-            <nav className="flex flex-col p-6 gap-6">
-              {links.map((link) => (
+            <nav className="flex flex-col p-2">
+              {[...links, { name: "Contact", path: "/contact" }].map((link) => (
                 <NavLink
                   key={link.path}
                   to={link.path}
                   onClick={() => setIsOpen(false)}
                   className={({ isActive }) =>
                     cn(
-                      "text-lg font-medium transition-colors hover:text-zinc-900",
-                      isActive ? "text-zinc-900" : "text-zinc-500"
+                      "font-mono text-sm px-6 py-4 rounded-xl transition-colors",
+                      isActive ? "bg-border/50 text-ink" : "text-muted hover:bg-border/30 hover:text-ink"
                     )
                   }
                 >

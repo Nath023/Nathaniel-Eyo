@@ -2,19 +2,37 @@
 
 @theme {
   --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
-  --font-serif: "Playfair Display", ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+  --font-serif: "Instrument Serif", ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  
+  --color-base: #F9F9F6;
+  --color-ink: #111111;
+  --color-accent: #E63946;
+  --color-muted: #888888;
+  --color-surface: #F0F0EA;
+  --color-border: #E5E5DF;
 }
 
 @layer base {
+  body {
+    @apply bg-base text-ink font-sans;
+  }
   *:focus-visible {
-    @apply outline-none ring-2 ring-zinc-900 ring-offset-2 ring-offset-zinc-50;
+    @apply outline-none ring-2 ring-accent ring-offset-2 ring-offset-base;
   }
 }
 
 @layer utilities {
   .pattern-grid {
-    background-size: 24px 24px;
-    background-image: linear-gradient(to right, rgb(228 228 231 / 0.6) 1px, transparent 1px),
-      linear-gradient(to bottom, rgb(228 228 231 / 0.6) 1px, transparent 1px);
+    background-size: 40px 40px;
+    background-image: linear-gradient(to right, var(--color-border) 1px, transparent 1px),
+      linear-gradient(to bottom, var(--color-border) 1px, transparent 1px);
+  }
+  .pattern-dots {
+    background-image: radial-gradient(var(--color-border) 1px, transparent 1px);
+    background-size: 20px 20px;
+  }
+  .text-balance {
+    text-wrap: balance;
   }
 }

@@ -2,7 +2,7 @@ import { motion } from "motion/react";
 import { SEO } from "../components/SEO";
 import { Link, useParams } from "react-router-dom";
 import { projects } from "../data/projects";
-import { ArrowLeft, ExternalLink } from "lucide-react";
+import { ArrowLeft, ArrowUpRight } from "lucide-react";
 
 export default function ProjectDetail() {
   const { slug } = useParams<{ slug: string }>();
@@ -10,108 +10,136 @@ export default function ProjectDetail() {
 
   if (!project) {
     return (
-      <div className="py-20 text-center flex flex-col items-center gap-4">
-        <h1 className="text-2xl font-serif">Project not found</h1>
-        <Link to="/work" className="text-zinc-500 hover:text-zinc-900 underline">Return to work</Link>
+      <div className="py-32 text-center flex flex-col items-center gap-6">
+        <h1 className="text-4xl font-serif">Project not found</h1>
+        <Link to="/work" className="font-mono text-xs uppercase tracking-widest text-muted hover:text-ink transition-colors">Return to index</Link>
       </div>
     );
   }
 
   return (
     <motion.div 
-      initial={{ opacity: 0, y: 10 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.5 }}
-      className="flex flex-col gap-16 max-w-4xl mx-auto"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 0.8 }}
+      className="flex flex-col pt-24 pb-16"
     >
       <SEO title={project.title} description={project.shortDescription} />
       
-      <header className="flex flex-col gap-8">
-        <Link to="/work" className="inline-flex items-center gap-2 text-sm text-zinc-500 hover:text-zinc-900 transition-colors w-fit">
-          <ArrowLeft className="w-4 h-4" /> Back to work
+      <header className="flex flex-col gap-12 max-w-5xl">
+        <Link to="/work" className="inline-flex items-center gap-2 font-mono text-xs uppercase tracking-widest text-muted hover:text-ink transition-colors w-fit group">
+          <ArrowLeft className="w-4 h-4 group-hover:-translate-x-1 transition-transform" /> Back to Index
         </Link>
         
-        <div className="flex flex-col gap-4">
-          <div className="flex items-center gap-3 text-sm font-medium text-zinc-500 uppercase tracking-widest">
-            <span>{project.category}</span>
-            <span>•</span>
+        <div className="flex flex-col gap-8">
+          <h1 className="font-serif text-5xl md:text-7xl lg:text-8xl italic leading-none">{project.title}</h1>
+          
+          <div className="flex flex-wrap items-center gap-4 text-xs font-mono tracking-widest uppercase text-muted">
+            <span className="text-ink">{project.category}</span>
+            <span>/</span>
             <span>{project.year}</span>
+            <span>/</span>
+            <span>{project.role}</span>
           </div>
-          <h1 className="font-serif text-4xl md:text-6xl text-zinc-900">{project.title}</h1>
-          <p className="text-xl md:text-2xl text-zinc-600 font-light leading-relaxed max-w-2xl">
+          
+          <p className="text-xl md:text-3xl text-ink font-light leading-snug max-w-3xl mt-4">
             {project.shortDescription}
           </p>
         </div>
-
-        {project.link && (
-          <a 
-            href={project.link} 
-            target="_blank" 
-            rel="noreferrer"
-            className="inline-flex items-center gap-2 h-12 px-6 rounded-full bg-zinc-900 text-white font-medium hover:bg-zinc-800 transition-colors w-fit mt-4"
-          >
-            Visit Live Site <ExternalLink className="w-4 h-4" />
-          </a>
-        )}
       </header>
 
       {/* Hero Image */}
-      <div className="aspect-[16/9] w-full bg-zinc-50 pattern-grid rounded-3xl overflow-hidden border border-zinc-200/50 flex items-center justify-center relative">
-        <div className="absolute inset-0 bg-gradient-to-t from-zinc-50/80 to-transparent" />
-        <span className="text-zinc-500 font-serif italic relative z-10 bg-white/80 px-6 py-3 rounded-full border border-zinc-200/50 text-sm md:text-base backdrop-blur-sm shadow-sm">Main Project Screenshot Placeholder</span>
-      </div>
+      <motion.div 
+        initial={{ y: 40, opacity: 0 }}
+        animate={{ y: 0, opacity: 1 }}
+        transition={{ duration: 1, delay: 0.2 }}
+        className="w-full aspect-[16/9] md:aspect-[21/9] bg-surface rounded-none md:rounded-3xl overflow-hidden mt-16 relative -mx-6 md:mx-0 w-[calc(100%+3rem)] md:w-full group"
+      >
+        <div className="absolute inset-0 pattern-grid opacity-30 group-hover:scale-105 transition-transform duration-1000" />
+        <div className="absolute inset-0 flex items-center justify-center">
+           <span className="font-serif italic text-3xl md:text-5xl text-muted mix-blend-multiply opacity-50">Project Visual</span>
+        </div>
+      </motion.div>
 
-      <div className="grid md:grid-cols-12 gap-12 md:gap-8">
+      <div className="grid lg:grid-cols-12 gap-16 lg:gap-24 mt-16 md:mt-32 max-w-6xl mx-auto w-full">
         {/* Sidebar Info */}
-        <div className="md:col-span-4 flex flex-col gap-8 text-sm">
-          <div className="flex flex-col gap-2">
-            <h3 className="font-semibold text-zinc-900 uppercase tracking-widest text-xs">My Role</h3>
-            <p className="text-zinc-600">{project.role}</p>
-          </div>
-          <div className="flex flex-col gap-2">
-            <h3 className="font-semibold text-zinc-900 uppercase tracking-widest text-xs">Technologies</h3>
-            <ul className="flex flex-wrap gap-2">
-              {project.technologies.map(tech => (
-                <li key={tech} className="bg-zinc-100 border border-zinc-200 text-zinc-600 px-3 py-1 rounded-full text-xs font-medium">
-                  {tech}
-                </li>
-              ))}
-            </ul>
+        <div className="lg:col-span-4 flex flex-col gap-12 sticky top-32 h-fit">
+          <div className="flex flex-col gap-8 p-8 bg-surface rounded-2xl border border-border">
+            {project.link && (
+              <a 
+                href={project.link} 
+                target="_blank" 
+                rel="noreferrer"
+                className="flex items-center justify-between w-full pb-4 border-b border-border group hover:text-accent transition-colors"
+              >
+                <span className="font-mono text-xs uppercase tracking-widest font-bold">Visit Live Site</span>
+                <ArrowUpRight className="w-4 h-4 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
+              </a>
+            )}
+            
+            <div className="flex flex-col gap-3">
+              <span className="font-mono text-xs uppercase tracking-widest text-muted">Technologies</span>
+              <div className="flex flex-wrap gap-2">
+                {project.technologies.map(tech => (
+                  <span key={tech} className="bg-white border border-border text-ink px-3 py-1.5 rounded-sm text-[10px] font-mono uppercase tracking-wider">
+                    {tech}
+                  </span>
+                ))}
+              </div>
+            </div>
+            
+            <div className="flex flex-col gap-3 pt-4 border-t border-border">
+              <span className="font-mono text-xs uppercase tracking-widest text-muted">My Role</span>
+              <p className="text-sm font-medium leading-relaxed">{project.role}</p>
+            </div>
           </div>
         </div>
 
         {/* Main Content */}
-        <div className="md:col-span-8 flex flex-col gap-12 prose prose-zinc max-w-none text-zinc-700">
-          <section>
-            <h2 className="font-serif text-2xl font-semibold text-zinc-900 mb-4">Overview</h2>
-            <p className="leading-relaxed">{project.overview}</p>
+        <div className="lg:col-span-8 flex flex-col gap-24">
+          <section className="flex flex-col gap-6">
+            <h2 className="font-serif text-4xl italic">Overview</h2>
+            <p className="text-lg text-muted leading-relaxed">{project.overview}</p>
           </section>
 
-          <section>
-            <h2 className="font-serif text-2xl font-semibold text-zinc-900 mb-4">The Problem</h2>
-            <p className="leading-relaxed">{project.problem}</p>
+          <section className="flex flex-col gap-6">
+            <h2 className="font-serif text-4xl italic">The Problem</h2>
+            <p className="text-lg text-muted leading-relaxed">{project.problem}</p>
           </section>
 
-          <div className="aspect-video w-full bg-zinc-50 pattern-grid rounded-2xl overflow-hidden border border-zinc-200/50 flex items-center justify-center my-4 relative">
-             <div className="absolute inset-0 bg-gradient-to-t from-zinc-50/50 to-transparent" />
-             <span className="text-zinc-500 font-serif italic relative z-10 bg-white/80 px-4 py-2 rounded-full border border-zinc-200/50 text-sm backdrop-blur-sm shadow-sm">Detail Screenshot Placeholder</span>
+          <div className="w-full aspect-video bg-surface rounded-2xl overflow-hidden relative group">
+             <div className="absolute inset-0 pattern-dots opacity-20 group-hover:scale-105 transition-transform duration-1000" />
+             <div className="absolute inset-0 flex items-center justify-center">
+               <span className="font-serif italic text-2xl text-muted mix-blend-multiply opacity-50">Interface Detail</span>
+             </div>
           </div>
 
-          <section>
-            <h2 className="font-serif text-2xl font-semibold text-zinc-900 mb-4">Approach</h2>
-            <p className="leading-relaxed">{project.approach}</p>
+          <section className="flex flex-col gap-6">
+            <h2 className="font-serif text-4xl italic">My Approach</h2>
+            <p className="text-lg text-muted leading-relaxed">{project.approach}</p>
           </section>
 
-          <section>
-            <h2 className="font-serif text-2xl font-semibold text-zinc-900 mb-4">Outcome</h2>
-            <p className="leading-relaxed">{project.outcome}</p>
+          <section className="flex flex-col gap-6">
+            <h2 className="font-serif text-4xl italic">The Outcome</h2>
+            <p className="text-lg text-muted leading-relaxed">{project.outcome}</p>
           </section>
 
-          <section>
-            <h2 className="font-serif text-2xl font-semibold text-zinc-900 mb-4">Lessons Learned</h2>
-            <p className="leading-relaxed">{project.lessonsLearned}</p>
+          <section className="flex flex-col gap-6 p-8 bg-surface rounded-2xl border border-border relative overflow-hidden">
+            <div className="absolute top-0 right-0 w-32 h-32 pattern-grid opacity-20 -z-10" />
+            <span className="font-mono text-xs uppercase tracking-widest text-muted">Retrospective</span>
+            <h2 className="font-serif text-3xl">Lessons Learned</h2>
+            <p className="text-lg text-ink leading-relaxed">{project.lessonsLearned}</p>
           </section>
         </div>
+      </div>
+      
+      {/* Next Project Teaser (Placeholder) */}
+      <div className="mt-32 pt-16 border-t border-border flex flex-col items-center justify-center text-center gap-6">
+        <span className="font-mono text-xs uppercase tracking-widest text-muted">Continue Exploring</span>
+        <h2 className="font-serif text-5xl md:text-6xl italic">More Work</h2>
+        <Link to="/work" className="font-mono text-xs uppercase tracking-widest bg-ink text-white px-8 py-4 rounded-full hover:bg-accent transition-colors mt-4">
+          Back to Index
+        </Link>
       </div>
     </motion.div>
   );

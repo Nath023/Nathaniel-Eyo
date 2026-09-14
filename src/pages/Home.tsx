@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { motion } from "motion/react";
-import { ArrowRight } from "lucide-react";
+import { ArrowUpRight } from "lucide-react";
 import { SEO } from "../components/SEO";
 import { projects } from "../data/projects";
 import { articles } from "../data/writing";
@@ -9,115 +9,155 @@ import { profile } from "../data/profile";
 export default function Home() {
   return (
     <motion.div 
-      initial={{ opacity: 0, y: 10 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.5 }}
-      className="flex flex-col gap-24"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 0.8 }}
+      className="flex flex-col gap-32 pb-16"
     >
       <SEO />
       
       {/* Hero Section */}
-      <section className="flex flex-col justify-center gap-6 pt-10 md:pt-20 min-h-[50vh]">
-        <h1 className="font-serif text-5xl md:text-7xl tracking-tight text-zinc-900 leading-[1.1]">
-          {profile.identity.name}.
-        </h1>
-        <p className="text-xl md:text-2xl text-zinc-600 font-light max-w-2xl leading-relaxed">
-          {profile.identity.heroTitle} <br className="hidden md:block"/>
-          {profile.identity.heroSubtitle}
-        </p>
-        <div className="flex items-center gap-4 mt-4">
-          <Link 
-            to="/work" 
-            className="inline-flex items-center justify-center h-12 px-6 rounded-full bg-zinc-900 text-white font-medium hover:bg-zinc-800 transition-colors"
+      <section className="pt-32 md:pt-48 flex flex-col gap-12 relative min-h-[70vh] justify-center">
+        <div className="absolute top-20 right-10 md:top-32 md:right-32 flex items-center gap-3">
+          <div className="relative flex h-3 w-3">
+            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-accent opacity-75"></span>
+            <span className="relative inline-flex rounded-full h-3 w-3 bg-accent"></span>
+          </div>
+          <span className="font-mono text-xs uppercase tracking-widest text-muted hidden md:block">Status: Building</span>
+        </div>
+
+        <div className="flex flex-col max-w-5xl">
+          <motion.h1 
+            initial={{ y: 20, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            transition={{ duration: 0.8, delay: 0.1 }}
+            className="font-serif text-6xl md:text-8xl lg:text-9xl italic tracking-tight leading-[0.9] text-ink"
           >
-            View my work
-          </Link>
-          <Link 
-            to="/about" 
-            className="inline-flex items-center justify-center h-12 px-6 rounded-full bg-white border border-zinc-200 text-zinc-900 font-medium hover:bg-zinc-50 transition-colors"
-          >
-            Read my story
-          </Link>
+            Digital <br className="md:hidden" /> builder.
+          </motion.h1>
+          
+          <div className="grid md:grid-cols-2 gap-8 mt-12 md:mt-24">
+            <motion.div 
+              initial={{ y: 20, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              className="flex flex-col gap-6"
+            >
+              <h2 className="text-2xl md:text-3xl text-ink font-light leading-snug">
+                {profile.identity.heroTitle}
+              </h2>
+              <p className="text-muted text-lg leading-relaxed max-w-md">
+                {profile.identity.heroSubtitle}
+              </p>
+              <div className="flex items-center gap-6 mt-4">
+                <Link to="/work" className="font-mono text-xs uppercase tracking-widest hover:text-accent transition-colors flex items-center gap-1 group">
+                  Explore Work <ArrowUpRight className="w-4 h-4 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
+                </Link>
+                <Link to="/about" className="font-mono text-xs uppercase tracking-widest text-muted hover:text-ink transition-colors">
+                  Read Profile
+                </Link>
+              </div>
+            </motion.div>
+            
+            <motion.div 
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 1, delay: 0.4 }}
+              className="hidden md:flex justify-end items-end"
+            >
+              <div className="w-64 h-64 border border-border rounded-full flex items-center justify-center relative overflow-hidden group">
+                <div className="absolute inset-0 pattern-grid opacity-50 group-hover:scale-110 transition-transform duration-1000" />
+                <span className="font-serif italic text-3xl z-10">{profile.identity.name.split(' ')[0]}</span>
+              </div>
+            </motion.div>
+          </div>
         </div>
       </section>
 
-      {/* Selected Work */}
-      <section className="flex flex-col gap-8">
-        <div className="flex items-center justify-between">
-          <h2 className="text-sm font-semibold uppercase tracking-widest text-zinc-400">Selected Work</h2>
-          <Link to="/work" className="text-sm font-medium text-zinc-900 flex items-center gap-1 hover:opacity-70 transition-opacity">
-            All work <ArrowRight className="w-4 h-4" />
-          </Link>
+      {/* Selected Work (Asymmetric Grid) */}
+      <section className="flex flex-col gap-12 border-t border-border pt-12 relative">
+        <div className="absolute top-0 right-0 w-px h-full bg-border hidden lg:block" />
+        
+        <div className="flex flex-col md:flex-row md:items-end justify-between gap-6">
+          <h2 className="font-serif text-4xl md:text-5xl italic">Selected Work</h2>
+          <Link to="/work" className="font-mono text-xs uppercase tracking-widest hover:text-accent transition-colors">View Index &rarr;</Link>
         </div>
-        <div className="grid md:grid-cols-2 gap-8">
-          {projects.slice(0, 4).map((project) => (
-            <Link key={project.slug} to={`/projects/${project.slug}`} className="group flex flex-col gap-4">
-              <div className="aspect-[4/3] bg-zinc-50 pattern-grid rounded-2xl overflow-hidden border border-zinc-200/50 flex items-center justify-center p-8 transition-transform group-hover:scale-[1.02] duration-300 relative">
-                <div className="absolute inset-0 bg-gradient-to-t from-zinc-50/50 to-transparent" />
-                <span className="text-zinc-500 font-serif italic text-xl relative z-10 bg-white/80 px-4 py-2 rounded-full border border-zinc-200/50 text-sm backdrop-blur-sm shadow-sm">Image Placeholder</span>
+        
+        <div className="grid md:grid-cols-12 gap-8 md:gap-12 mt-8">
+          {projects.slice(0, 4).map((project, i) => (
+            <Link 
+              key={project.slug} 
+              to={`/projects/${project.slug}`} 
+              className={`group flex flex-col gap-6 ${
+                i === 0 ? 'md:col-span-8' : 
+                i === 1 ? 'md:col-span-4 md:mt-32' : 
+                i === 2 ? 'md:col-span-5' : 
+                'md:col-span-7 md:-mt-24'
+              }`}
+            >
+              <div className="w-full overflow-hidden bg-surface rounded-2xl relative aspect-[4/3] md:aspect-auto md:h-[400px]">
+                <div className="absolute inset-0 bg-border/20 group-hover:bg-transparent transition-colors z-10" />
+                <div className="absolute inset-0 pattern-grid opacity-30 group-hover:scale-105 transition-transform duration-700" />
+                <div className="absolute top-4 left-4 z-20 flex gap-2">
+                  {project.technologies.slice(0,2).map(tech => (
+                    <span key={tech} className="bg-white/90 backdrop-blur text-ink text-[10px] font-mono px-2 py-1 rounded-sm uppercase tracking-wider">{tech}</span>
+                  ))}
+                </div>
               </div>
-              <div className="flex flex-col">
-                <h3 className="font-semibold text-lg">{project.title}</h3>
-                <p className="text-zinc-500 text-sm mt-1">{project.shortDescription}</p>
+              <div className="flex flex-col gap-2">
+                <div className="flex items-center gap-3">
+                  <span className="font-mono text-xs text-muted">0{i + 1}</span>
+                  <h3 className="font-serif text-2xl group-hover:text-accent transition-colors">{project.title}</h3>
+                </div>
+                <p className="text-muted text-sm md:w-4/5 ml-7">{project.shortDescription}</p>
               </div>
             </Link>
           ))}
         </div>
       </section>
 
-      {/* What I Do & Current Focus */}
-      <section className="grid md:grid-cols-2 gap-16">
-        <div className="flex flex-col gap-6">
-          <h2 className="font-serif text-3xl">What I do</h2>
-          <p className="text-zinc-600 leading-relaxed">
-            {profile.biography.short}
+      {/* Editorial Writing */}
+      <section className="grid lg:grid-cols-3 gap-16 border-t border-border pt-12">
+        <div className="lg:col-span-1 flex flex-col gap-6">
+          <h2 className="font-serif text-4xl md:text-5xl italic">Writing</h2>
+          <p className="text-muted text-sm leading-relaxed max-w-xs">
+            Thoughts, technical guides, and reflections on building digital products and businesses.
           </p>
-          <Link to="/about" className="text-sm font-medium underline underline-offset-4 hover:opacity-70 transition-opacity w-fit">
-            More about my background
+          <Link to="/writing" className="font-mono text-xs uppercase tracking-widest hover:text-accent transition-colors w-fit mt-4 flex items-center gap-1 group">
+            Read all <ArrowUpRight className="w-3 h-3 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
           </Link>
         </div>
-        <div className="flex flex-col gap-6">
-          <h2 className="font-serif text-3xl">Current focus</h2>
-          <ul className="flex flex-col gap-4 text-zinc-600">
-            {profile.now.learning.map((item, index) => (
-              <li key={index} className="flex items-start gap-3">
-                <span className="w-1.5 h-1.5 rounded-full bg-zinc-400 mt-2 shrink-0" />
-                <span>{item}</span>
-              </li>
-            ))}
-          </ul>
-        </div>
-      </section>
-
-      {/* Selected Writing */}
-      <section className="flex flex-col gap-8">
-        <div className="flex items-center justify-between">
-          <h2 className="text-sm font-semibold uppercase tracking-widest text-zinc-400">Selected Writing</h2>
-          <Link to="/writing" className="text-sm font-medium text-zinc-900 flex items-center gap-1 hover:opacity-70 transition-opacity">
-            All writing <ArrowRight className="w-4 h-4" />
-          </Link>
-        </div>
-        <div className="flex flex-col">
+        
+        <div className="lg:col-span-2 flex flex-col">
           {articles.slice(0, 3).map((article) => (
-            <Link key={article.slug} to={`/writing/${article.slug}`} className="group py-6 border-b border-zinc-200/50 last:border-0 flex flex-col md:flex-row md:items-baseline justify-between gap-2">
-              <h3 className="font-medium text-lg group-hover:text-zinc-500 transition-colors">{article.title}</h3>
-              <span className="text-sm text-zinc-400 tabular-nums shrink-0">{article.date}</span>
+            <Link 
+              key={article.slug} 
+              to={`/writing/${article.slug}`} 
+              className="group py-8 border-b border-border last:border-0 flex flex-col md:flex-row md:items-center justify-between gap-4 relative overflow-hidden"
+            >
+              <div className="absolute inset-0 bg-surface -translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-out -z-10" />
+              <div className="flex flex-col gap-2">
+                <span className="font-mono text-xs tracking-widest text-muted uppercase">{article.category}</span>
+                <h3 className="font-serif text-2xl md:text-3xl group-hover:text-accent transition-colors">{article.title}</h3>
+              </div>
+              <span className="font-mono text-sm text-muted shrink-0">{article.date}</span>
             </Link>
           ))}
         </div>
       </section>
 
-      {/* Contact CTA */}
-      <section className="bg-zinc-900 text-white rounded-3xl p-10 md:p-16 flex flex-col items-center text-center gap-6 mt-10">
-        <h2 className="font-serif text-4xl">Let's build together.</h2>
-        <p className="text-zinc-400 max-w-md mx-auto">
-          I'm currently open to new opportunities, freelance projects, and interesting conversations.
-        </p>
+      {/* Narrative Intro */}
+      <section className="bg-surface rounded-3xl p-8 md:p-24 flex flex-col items-center text-center gap-8 mt-12 relative overflow-hidden">
+        <div className="absolute inset-0 pattern-dots opacity-20 pointer-events-none" />
+        <span className="font-mono text-xs tracking-widest text-muted uppercase relative z-10">Background</span>
+        <h2 className="font-serif text-3xl md:text-5xl max-w-3xl leading-tight relative z-10">
+          "I combine technical engineering with strategic business thinking to build tools that actually work for people."
+        </h2>
         <Link 
-          to="/contact" 
-          className="inline-flex items-center justify-center h-12 px-8 rounded-full bg-white text-zinc-900 font-medium hover:bg-zinc-100 transition-colors mt-4"
+          to="/about" 
+          className="font-mono text-xs uppercase tracking-widest bg-ink text-white px-8 py-4 rounded-full hover:bg-accent transition-colors relative z-10 mt-4"
         >
-          Get in touch
+          Read my story
         </Link>
       </section>
     </motion.div>
