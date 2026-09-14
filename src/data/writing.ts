@@ -10,6 +10,31 @@ export interface Article {
 
 export const articles: Article[] = [
   {
+    slug: "what-i-learned-building-my-first-digital-business",
+    title: "What I Learned Building My First Digital Business",
+    date: "September 14, 2026",
+    category: "Lessons",
+    readingTime: "2 min read",
+    excerpt: "Lessons I learned while building and working on digital businesses.",
+    content: `
+# What I Learned Building My First Digital Business
+
+Starting a digital business taught me...
+
+## The first lesson
+
+Your content goes here.
+
+## The second lesson
+
+More content goes here.
+
+## Final thoughts
+
+More content here.
+    `,
+  },
+  {
     slug: "building-scalable-business-systems",
     title: "Building Scalable Business Systems for the Modern Web",
     date: "October 12, 2023",
