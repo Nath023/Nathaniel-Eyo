@@ -1,0 +1,350 @@
+read from private field
+Cannot add the same private member more than once
+write to private field
+access private method
+setState(...): takes an object of state variables to update or a function which returns an object of state variables.
+Objects are not valid as a React child (found: 
+). If you meant to render a collection of children, use an array instead.
+act(...) is not supported in production builds of React.
+React.Children.only expected to receive a single React element child.
+React.cloneElement(...): The argument must be a React element, but you passed 
+forceFrameRate takes a positive int between 0 and 125, forcing frame rates higher than 125 fps is not supported
+Minified React error #
+ for the full message or use the non-minified dev environment for full errors and additional helpful warnings.
+children dangerouslySetInnerHTML defaultValue defaultChecked innerHTML suppressContentEditableWarning suppressHydrationWarning style
+allowFullScreen async autoFocus autoPlay controls default defer disabled disablePictureInPicture disableRemotePlayback formNoValidate hidden loop noModule noValidate open playsInline readOnly required reversed scoped seamless itemScope
+accent-height alignment-baseline arabic-form baseline-shift cap-height clip-path clip-rule color-interpolation color-interpolation-filters color-profile color-rendering dominant-baseline enable-background fill-opacity fill-rule flood-color flood-opacity font-family font-size font-size-adjust font-stretch font-style font-variant font-weight glyph-name glyph-orientation-horizontal glyph-orientation-vertical horiz-adv-x horiz-origin-x image-rendering letter-spacing lighting-color marker-end marker-mid marker-start overline-position overline-thickness paint-order panose-1 pointer-events rendering-intent shape-rendering stop-color stop-opacity strikethrough-position strikethrough-thickness stroke-dasharray stroke-dashoffset stroke-linecap stroke-linejoin stroke-miterlimit stroke-opacity stroke-width text-anchor text-decoration text-rendering underline-position underline-thickness unicode-bidi unicode-range units-per-em v-alphabetic v-hanging v-ideographic v-mathematical vector-effect vert-adv-y vert-origin-x vert-origin-y word-spacing writing-mode xmlns:xlink x-height
+xlink:actuate xlink:arcrole xlink:role xlink:show xlink:title xlink:type
+mousedown mouseup touchcancel touchend touchstart auxclick dblclick pointercancel pointerdown pointerup dragend dragstart drop compositionend compositionstart keydown keypress keyup input textInput copy cut paste click change contextmenu reset submit
+abort auxClick cancel canPlay canPlayThrough click close contextMenu copy cut drag dragEnd dragEnter dragExit dragLeave dragOver dragStart drop durationChange emptied encrypted ended error gotPointerCapture input invalid keyDown keyPress keyUp load loadedData loadedMetadata loadStart lostPointerCapture mouseDown mouseMove mouseOut mouseOver mouseUp paste pause play playing pointerCancel pointerDown pointerMove pointerOut pointerOver pointerUp progress rateChange reset resize seeked seeking stalled submit suspend timeUpdate touchCancel touchEnd touchStart volumeChange scroll toggle touchMove waiting wheel
+change click focusin focusout input keydown keyup selectionchange
+focusout contextmenu dragend focusin keydown keyup mousedown mouseup selectionchange
+compositionend focusout keydown keypress keyup mousedown
+compositionstart focusout keydown keypress keyup mousedown
+compositionupdate focusout keydown keypress keyup mousedown
+abort canplay canplaythrough durationchange emptied encrypted ended error loadeddata loadedmetadata loadstart pause play playing progress ratechange resize seeked seeking stalled suspend timeupdate volumechange waiting
+cancel close invalid load scroll toggle
+ react-mount-point-unstable 
+Notifications ({hotkey})
+m15.477 12.89 1.515 8.526a.5.5 0 0 1-.81.47l-3.58-2.687a1 1 0 0 0-1.197 0l-3.586 2.686a.5.5 0 0 1-.81-.469l1.514-8.526
+M3 3v16a2 2 0 0 0 2 2h16
+M16 8a1 1 0 0 1 1 1v8a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4V9a1 1 0 0 1 1-1h14a4 4 0 1 1 0 8h-1
+M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6
+M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4
+M9 18c-4.51 2-5-2-7-2
+M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20
+M21.42 10.922a1 1 0 0 0-.019-1.838L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.08a1 1 0 0 0 0 1.832l8.57 3.908a2 2 0 0 0 1.66 0z
+M6 12.5V16a6 3 0 0 0 12 0v-3.5
+M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z
+M15 14c.2-1 .7-1.7 1.5-2.5 1-.9 1.5-2.2 1.5-3.5A6 6 0 0 0 6 8c0 1 .2 2.2 1.5 3.5.7.7 1.3 1.5 1.5 2.5
+M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z
+m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7
+M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0
+M7.9 20A9 9 0 1 0 4 16.1L2 22Z
+M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z
+M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z
+M14.536 21.686a.5.5 0 0 0 .937-.024l6.5-19a.496.496 0 0 0-.635-.635l-19 6.5a.5.5 0 0 0-.024.937l7.93 3.18a2 2 0 0 1 1.112 1.11z
+m21.854 2.147-10.94 10.939
+M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z
+m17.66 17.66 1.41 1.41
+m6.34 17.66-1.41 1.41
+m19.07 4.93-1.41 1.41
+M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z
+M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2
+M22 21v-2a4 4 0 0 0-3-3.87
+M16 3.13a4 4 0 0 1 0 7.75
+M4 14a1 1 0 0 1-.78-1.63l9.9-10.2a.5.5 0 0 1 .86.46l-1.92 6.02A1 1 0 0 0 13 10h7a1 1 0 0 1 .78 1.63l-9.9 10.2a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14z
+fixed top-0 z-[100] flex max-h-screen w-full flex-col-reverse p-4 sm:bottom-0 sm:right-0 sm:top-auto sm:flex-col md:max-w-[420px]
+group pointer-events-auto relative flex w-full items-center justify-between space-x-4 overflow-hidden rounded-md border p-6 pr-8 shadow-lg transition-all data-[swipe=cancel]:translate-x-0 data-[swipe=end]:translate-x-[var(--radix-toast-swipe-end-x)] data-[swipe=move]:translate-x-[var(--radix-toast-swipe-move-x)] data-[swipe=move]:transition-none data-[state=open]:animate-in data-[state=closed]:animate-out data-[swipe=end]:animate-out data-[state=closed]:fade-out-80 data-[state=closed]:slide-out-to-right-full data-[state=open]:slide-in-from-top-full data-[state=open]:sm:slide-in-from-bottom-full
+border bg-background text-foreground
+destructive group border-destructive bg-destructive text-destructive-foreground
+inline-flex h-8 shrink-0 items-center justify-center rounded-md border bg-transparent px-3 text-sm font-medium ring-offset-background transition-colors hover:bg-secondary focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 group-[.destructive]:border-muted/40 group-[.destructive]:hover:border-destructive/30 group-[.destructive]:hover:bg-destructive group-[.destructive]:hover:text-destructive-foreground group-[.destructive]:focus:ring-destructive
+absolute right-2 top-2 rounded-md p-1 text-foreground/50 opacity-0 transition-opacity hover:text-foreground focus:opacity-100 focus:outline-none focus:ring-2 group-hover:opacity-100 group-[.destructive]:text-red-300 group-[.destructive]:hover:text-red-50 group-[.destructive]:focus:ring-red-400 group-[.destructive]:focus:ring-offset-red-600
+text-sm font-semibold
+(prefers-color-scheme: dark)
+M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z
+M9.401 3.003c1.155-2 4.043-2 5.197 0l7.355 12.748c1.154 2-.29 4.5-2.599 4.5H4.645c-2.309 0-3.752-2.5-2.598-4.5L9.4 3.003zM12 8.25a.75.75 0 01.75.75v3.75a.75.75 0 01-1.5 0V9a.75.75 0 01.75-.75zm0 8.25a.75.75 0 100-1.5.75.75 0 000 1.5z
+M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a.75.75 0 000 1.5h.253a.25.25 0 01.244.304l-.459 2.066A1.75 1.75 0 0010.747 15H11a.75.75 0 000-1.5h-.253a.25.25 0 01-.244-.304l.459-2.066A1.75 1.75 0 009.253 9H9z
+M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-8-5a.75.75 0 01.75.75v4.5a.75.75 0 01-1.5 0v-4.5A.75.75 0 0110 5zm0 10a1 1 0 100-2 1 1 0 000 2z
+group toast group-[.toaster]:bg-background group-[.toaster]:text-foreground group-[.toaster]:border-border group-[.toaster]:shadow-lg
+group-[.toast]:bg-primary group-[.toast]:text-primary-foreground
+group-[.toast]:bg-muted group-[.toast]:text-muted-foreground
+translateY(50%) rotate(90deg) translateX(-50%)
+translateY(50%) rotate(-90deg) translateX(50%)
+z-50 overflow-hidden rounded-md border bg-popover px-3 py-1.5 text-sm text-popover-foreground shadow-md animate-in fade-in-0 zoom-in-95 data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=closed]:zoom-out-95 data-[side=bottom]:slide-in-from-top-2 data-[side=left]:slide-in-from-right-2 data-[side=right]:slide-in-from-left-2 data-[side=top]:slide-in-from-bottom-2
+No window.location.(origin|href) available to create URL for href: 
+A history only accepts one active listener
+must start with the combined path of all its parent routes.
+Index routes must not have child routes. Please remove 
+always follow a `/` in the pattern. To get rid of this warning, 
+rgba(200,200,200, 0.5)
+Unexpected Application Error!
+React Router caught the following error during render
+useTheme must be used within a ThemeProvider
+inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0
+bg-primary text-primary-foreground hover:bg-primary/90
+bg-destructive text-destructive-foreground hover:bg-destructive/90
+border border-input bg-background hover:bg-accent hover:text-accent-foreground
+bg-secondary text-secondary-foreground hover:bg-secondary/80
+hover:bg-accent hover:text-accent-foreground
+text-primary underline-offset-4 hover:underline
+bg-background/80 backdrop-blur-lg border-b border-border shadow-card
+max-w-7xl mx-auto px-4 sm:px-6 lg:px-8
+flex items-center justify-between h-16
+text-xl font-bold text-foreground hover:text-primary transition-colors duration-200
+hidden md:flex space-x-1
+px-4 py-2 text-sm font-medium text-muted-foreground hover:text-foreground transition-colors duration-200 rounded-lg hover:bg-muted
+flex items-center space-x-2
+md:hidden h-9 w-9 p-0
+px-2 pt-2 pb-3 space-y-1 bg-background/95 backdrop-blur-lg border border-border rounded-lg mt-2 shadow-card
+block w-full text-left px-3 py-2 text-base font-medium text-muted-foreground hover:text-foreground hover:bg-muted rounded-md transition-colors duration-200
+inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2
+border-transparent bg-primary text-primary-foreground hover:bg-primary/80
+border-transparent bg-secondary text-secondary-foreground hover:bg-secondary/80
+border-transparent bg-destructive text-destructive-foreground hover:bg-destructive/80
+relative min-h-screen flex items-center justify-center bg-gradient-hero
+absolute inset-0 bg-grid-pattern opacity-5
+relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center
+🚀 Available for new projects
+w-32 h-32 sm:w-40 sm:h-40 rounded-full bg-gradient-primary p-1
+w-full h-full rounded-full overflow-hidden
+w-full h-full object-cover
+absolute -bottom-2 -right-2 w-8 h-8 bg-accent rounded-full flex items-center justify-center
+w-3 h-3 bg-background rounded-full animate-pulse
+text-4xl sm:text-5xl lg:text-7xl font-bold text-foreground leading-tight
+bg-gradient-accent bg-clip-text text-transparent
+text-lg sm:text-xl text-muted-foreground leading-relaxed
+Web Developer & SEO Consultant from Abuja, Nigeria.
+font-semibold text-foreground
+Alpha-Link Digital Solutions
+text-base text-muted-foreground max-w-lg mx-auto
+Designing purpose-driven websites that elevate businesses through strategic development, SEO optimization, and compelling user experiences.
+flex flex-col sm:flex-row gap-4 justify-center items-center
+bg-gradient-primary hover:shadow-glow transition-all duration-300 group
+ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform
+border-primary text-primary hover:bg-primary hover:text-primary-foreground transition-all duration-300
+flex justify-center space-x-6
+text-muted-foreground hover:text-primary
+flex justify-center pt-8
+animate-bounce text-muted-foreground hover:text-primary transition-colors duration-200
+rounded-lg border bg-card text-card-foreground shadow-sm
+flex flex-col space-y-1.5 p-6
+text-2xl font-semibold leading-none tracking-tight
+text-sm text-muted-foreground
+flex items-center p-6 pt-0
+Marine Procurement & Logistics
+Complete digital transformation for a marine procurement company, featuring custom logistics management system and responsive design.
+Create a professional web presence for complex marine logistics operations while ensuring mobile optimization for field workers.
+Built with modern web technologies, implemented custom CMS for easy content management, and optimized for marine industry workflows.
+Gained deep insights into maritime industry requirements and the importance of offline-capable design for mobile users.
+Full Stack Designer & Developer
+A web application that helps users track their subscriptions and sends WhatsApp notifications when renewals are due. Never miss a subscription payment again.
+WhatsApp Business API
+Frontend Developer & SEO Specialist
+Renewable Energy & Surveillance
+Modern website for a tech company specializing in renewable energy solutions and surveillance technology.
+Communicate complex technical services while maintaining professional credibility and search engine visibility.
+Implemented clean, technical design with detailed service pages, integrated SEO strategy, and mobile-first approach.
+Learned how to present technical services accessibly while maintaining industry authority and trust.
+Creative Web Developer
+Music & Talent Management
+Dynamic platform for music and talent management, featuring artist portfolios and event management capabilities.
+Create an engaging, multimedia-rich platform that showcases creative talent while maintaining fast loading times.
+Developed with performance optimization in mind, integrated social media feeds, and created custom gallery systems.
+Discovered the importance of balancing visual appeal with performance, especially for media-heavy creative websites.
+Web Developer & Digital Strategist
+Professional website for a security consulting firm, emphasizing trust, authority, and clear service communication.
+Build credibility for a security firm while ensuring the website itself demonstrates security best practices.
+Focused on clean, professional design with security certifications prominently displayed and implemented robust security measures.
+Understood how website design directly impacts trust perception, especially in security-sensitive industries.
+py-20 lg:py-32 bg-background
+text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground mb-6
+text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed
+A showcase of impactful projects that solve real business challenges through thoughtful design and strategic development.
+overflow-hidden shadow-elegant border-0 bg-gradient-to-r from-card to-muted/50
+grid lg:grid-cols-2 gap-0
+relative h-64 lg:h-full min-h-[400px] bg-muted
+absolute inset-0 bg-gradient-primary opacity-20
+absolute inset-0 flex items-center justify-center
+text-6xl font-bold text-primary opacity-50
+p-8 lg:p-12 flex flex-col justify-center
+text-2xl lg:text-3xl font-bold mb-2
+text-lg text-muted-foreground
+text-foreground leading-relaxed
+font-semibold text-foreground mb-2
+grid md:grid-cols-2 lg:grid-cols-3 gap-8
+group hover:shadow-card transition-all duration-300 border-0 shadow-elegant overflow-hidden
+relative h-48 bg-muted
+absolute inset-0 bg-gradient-accent opacity-20
+text-4xl font-bold text-primary opacity-50
+text-xl group-hover:text-primary transition-colors
+text-sm text-muted-foreground leading-relaxed
+text-xs font-semibold text-foreground uppercase tracking-wide mb-1
+text-xs text-muted-foreground
+Started freelancing for friends and family, building simple websites and learning the fundamentals of web development.
+Expanded into WordPress development and began understanding client needs beyond just coding.
+Discovered the power of SEO and how technical skills could drive real business results for clients.
+Founded ALDS to provide comprehensive digital solutions, combining development with strategic consulting.
+Continuing education at NOUN while building impactful solutions for diverse clients across Nigeria and beyond.
+ALX Foundation Certificate
+Completed the prestigious ALX Software Engineering Foundation program, mastering modern development practices and collaboration.
+Every project should solve real problems and create meaningful impact for businesses and their customers.
+The best solutions emerge from close collaboration with clients, understanding their unique challenges and goals.
+Staying current with technology trends to provide modern, future-proof solutions that grow with businesses.
+py-20 lg:py-32 bg-muted/30
+The journey from curious beginner to seasoned professional, driven by a passion for creating digital solutions that matter.
+grid lg:grid-cols-2 gap-16 items-start
+flex items-center space-x-4 text-muted-foreground
+text-2xl font-bold text-foreground
+space-y-4 text-muted-foreground leading-relaxed
+What started as helping friends and family with simple websites has evolved into a passion for creating digital experiences that truly make a difference. Based in Nigeria's capital, I've had the privilege of working with diverse businesses across various industries.
+Alpha-Link Digital Solutions (ALDS)
+ to bring together my technical skills with strategic thinking. The goal was simple: help businesses not just get online, but thrive online.
+2025 marked a significant milestone with my completion of the 
+ALX Software Foundation program
+. This program sharpened my problem-solving skills and introduced me to modern development methodologies, collaborative workflows, and industry best practices.
+space-y-4 animate-fade-in
+The ALX program was transformative not just technically, but in how I approach challenges. Learning alongside peers from across Africa expanded my perspective on what technology can achieve in our continent. The program's emphasis on collaboration and real-world problem-solving has directly influenced how I work with clients today.
+Currently pursuing my degree at the National Open University of Nigeria (NOUN), I'm committed to continuous learning. Technology evolves rapidly, and staying ahead means never stop being curious, never stop experimenting, and never stop pushing boundaries.
+bg-primary/5 p-4 rounded-lg border-l-4 border-primary
+The intersection of creativity and technology is where magic happens. Every line of code, every design decision, every user interaction is an opportunity to make someone's day a little better.
+Currently pursuing my degree at NOUN, I believe in continuous learning and staying ahead of the rapidly evolving digital landscape.
+group flex items-center space-x-2 text-primary hover:text-primary/80 transition-colors duration-200 text-sm font-medium
+bg-gradient-primary text-primary-foreground
+text-xl font-bold text-foreground
+border-0 shadow-card hover:shadow-elegant transition-shadow duration-300
+flex items-start space-x-4
+w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center
+text-xl font-bold text-foreground mb-8
+bg-primary/5 border border-primary/20 shadow-lg animate-pulse
+bg-gradient-primary shadow-primary/30 shadow-lg
+h-5 w-5 text-primary-foreground
+flex items-center space-x-3 mb-2
+bg-primary text-primary-foreground
+space-y-2 group cursor-pointer p-3 rounded-lg transition-all duration-200 hover:bg-muted/50
+flex justify-between items-center
+font-medium text-foreground group-hover:text-primary transition-colors
+text-primary font-semibold scale-110
+w-full bg-muted rounded-full h-2 overflow-hidden
+bg-gradient-primary shadow-lg shadow-primary/30
+border-0 shadow-card bg-gradient-accent text-accent-foreground
+text-lg font-bold mb-4
+grid grid-cols-2 gap-4 text-center
+Web Design & Development
+Custom, responsive websites built with modern technologies and best practices.
+Mobile-first responsive design
+Custom WordPress development
+Modern HTML5/CSS3/JavaScript
+Performance optimization
+Cross-browser compatibility
+Content Management Systems
+Development & Testing
+Launch & Optimization
+Strategic SEO services to improve your search engine rankings and organic visibility.
+Keyword research & strategy
+Local SEO for Nigerian businesses
+Performance monitoring
+Monitoring & Reporting
+Strategic consulting to help businesses navigate their digital transformation journey.
+Digital strategy development
+Technology recommendations
+Team training & workshops
+Implementation Planning
+bg-gradient-to-r from-purple-500 to-pink-500
+Comprehensive digital marketing strategies to grow your online presence and reach.
+Social media strategy
+Email marketing campaigns
+PPC advertising setup
+bg-gradient-to-r from-orange-500 to-red-500
+Ensure your website performs perfectly on all mobile devices.
+Protect your website with robust security measures and monitoring.
+Performance Optimization
+Speed up your website for better user experience and SEO.
+Connect your website with third-party services and tools.
+Comprehensive digital solutions designed to help your business thrive in the modern marketplace.
+grid md:grid-cols-2 gap-8 mb-16
+relative overflow-hidden border-0 shadow-elegant hover:shadow-glow transition-all duration-300 group
+absolute top-4 right-4 z-10
+bg-accent text-accent-foreground
+flex items-center space-x-4 mb-4
+text-sm font-medium text-primary mt-1
+text-base leading-relaxed
+font-semibold text-foreground mb-3
+flex items-center space-x-3
+w-1.5 h-1.5 bg-primary rounded-full flex-shrink-0
+w-full bg-gradient-primary hover:shadow-glow transition-all duration-300
+text-2xl font-bold text-foreground mb-4
+Specialized services to enhance and protect your digital presence
+grid sm:grid-cols-2 lg:grid-cols-4 gap-6
+text-center border-0 shadow-card hover:shadow-elegant transition-all duration-300 group
+w-12 h-12 bg-muted rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:bg-primary/10 transition-colors duration-300
+font-semibold text-foreground mb-2 group-hover:text-primary transition-colors
+border-0 shadow-elegant bg-gradient-hero
+text-2xl lg:text-3xl font-bold text-foreground mb-4
+Ready to Transform Your Digital Presence?
+text-muted-foreground mb-8 max-w-2xl mx-auto leading-relaxed
+Let's discuss your project and create a digital solution that drives real results for your business.
+flex flex-col sm:flex-row gap-4 justify-center
+bg-gradient-primary hover:shadow-glow transition-all duration-300
+flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-base ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 md:text-sm
+flex min-h-[80px] w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50
+button, input, select, textarea
+text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70
+The public key is required. Visit https://dashboard.emailjs.com/admin/account
+The service ID is required. Visit https://dashboard.emailjs.com/admin
+The template ID is required. Visit https://dashboard.emailjs.com/admin/templates
+The template params have to be the object. Visit https://www.emailjs.com/docs/sdk/send/
+Unavailable For Headless Browser
+The BlockList list has to be an array
+The BlockList watchVariable has to be a string
+The LimitRate throttle has to be a positive number
+The LimitRate ID has to be a non-empty string
+The 3rd parameter is expected to be the HTML form element or the style selector of the form
+Thank you for reaching out. I’ll get back to you within 24 hours.
+There was an issue submitting your message. Try again later.
++234 (0) 708 112 9997
+hover:text-gray-900 dark:hover:text-gray-100
+Ready to start your next project? I'd love to hear about your ideas and how we can bring them to life together.
+grid lg:grid-cols-2 gap-12 items-start
+border-0 shadow-elegant
+Fill out the form below and I'll get back to you within 24 hours.
+grid sm:grid-cols-2 gap-4
+border-border focus:border-primary
+Tell me about your project, goals, timeline, and any specific requirements...
+border-border focus:border-primary resize-none
+w-full bg-gradient-primary hover:shadow-glow transition-all duration-300 group
+Multiple ways to reach me for your convenience.
+flex items-center space-x-4 p-3 rounded-lg hover:bg-muted transition-colors duration-200 group
+w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center group-hover:bg-primary/20 transition-colors duration-200
+font-medium text-foreground
+text-sm text-muted-foreground group-hover:text-foreground transition-colors duration-200
+Stay updated with my latest work and insights.
+text-lg font-bold mb-2
+text-sm opacity-90 mb-4
+I'm currently accepting new projects and would love to hear about yours.
+w-2 h-2 bg-green-400 rounded-full animate-pulse
+Available for new projects
+text-lg font-bold text-foreground mb-2
+space-y-2 text-sm text-muted-foreground
+w-1.5 h-1.5 bg-primary rounded-full
+Response within 24 hours
+Free initial consultation
+Detailed project proposal
+Transparent communication
+bg-background border-t border-border
+max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12
+text-center space-y-4
+Web Developer & SEO Consultant
+flex items-center justify-center space-x-2 text-sm text-muted-foreground
+h-4 w-4 text-red-500 fill-current
+flex items-center justify-center space-x-4 text-xs text-muted-foreground
+flex items-center space-x-1
+Powered by lots of coffee
+pt-4 border-t border-border
+ Nathaniel Eyo. All rights reserved. | Alpha-Link Digital Solutions
+min-h-screen bg-background text-foreground font-body
+404 Error: User attempted to access non-existent route:
+min-h-screen flex items-center justify-center bg-gray-100
+text-4xl font-bold mb-4
+text-xl text-gray-600 mb-4
+text-blue-500 hover:text-blue-700 underline

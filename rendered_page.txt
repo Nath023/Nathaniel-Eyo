@@ -1,0 +1,365 @@
+Nathaniel Eyo
+Home
+Work
+About
+Services
+Contact
+Toggle theme
+🚀 Available for new projects
+I craft digital experiences,
+solutions & stories
+
+Web Developer & SEO Consultant from Abuja, Nigeria.
+Founder of Alpha-Link Digital Solutions
+
+Designing purpose-driven websites that elevate businesses through strategic development, SEO optimization, and compelling user experiences.
+
+Explore My Work
+Let's Talk
+GitHub
+LinkedIn
+Email
+Selected Work
+
+A showcase of impactful projects that solve real business challenges through thoughtful design and strategic development.
+
+M
+Featured Project
+Merryhap.com
+
+Marine Procurement & Logistics
+
+Complete digital transformation for a marine procurement company, featuring custom logistics management system and responsive design.
+
+Challenge
+
+Create a professional web presence for complex marine logistics operations while ensuring mobile optimization for field workers.
+
+Key Learnings
+
+Gained deep insights into maritime industry requirements and the importance of offline-capable design for mobile users.
+
+WordPress
+Custom PHP
+Responsive Design
+SEO
+View Live
+Case Study
+R
+Featured Project
+RenewMe
+
+Productivity
+
+A web application that helps users track their subscriptions and sends WhatsApp notifications when renewals are due. Never miss a subscription payment again.
+
+Challenge
+
+Key Learnings
+
+React
+TypeScript
+Tailwind CSS
+WhatsApp Business API
+Node.js
+View Live
+Case Study
+S
+SQZcomms.com
+
+Renewable Energy & Surveillance
+
+Modern website for a tech company specializing in renewable energy solutions and surveillance technology.
+
+CHALLENGE
+
+Communicate complex technical services while maintaining professional credibility and search engine visibility.
+
+KEY LEARNING
+
+Learned how to present technical services accessibly while maintaining industry authority and trust.
+
+HTML5
+CSS3
+JavaScript
++1
+Live Site
+Details
+K
+Kalaku Vibes
+
+Music & Talent Management
+
+Dynamic platform for music and talent management, featuring artist portfolios and event management capabilities.
+
+CHALLENGE
+
+Create an engaging, multimedia-rich platform that showcases creative talent while maintaining fast loading times.
+
+KEY LEARNING
+
+Discovered the importance of balancing visual appeal with performance, especially for media-heavy creative websites.
+
+WordPress
+Custom CSS
+Media Optimization
++1
+Details
+H
+HubOne-Consult.com
+
+Security Consulting
+
+Professional website for a security consulting firm, emphasizing trust, authority, and clear service communication.
+
+CHALLENGE
+
+Build credibility for a security firm while ensuring the website itself demonstrates security best practices.
+
+KEY LEARNING
+
+Understood how website design directly impacts trust perception, especially in security-sensitive industries.
+
+Secure WordPress
+SSL Implementation
+Professional Design
++1
+Live Site
+Details
+View All Projects
+About Nathaniel
+
+The journey from curious beginner to seasoned professional, driven by a passion for creating digital solutions that matter.
+
+Abuja, Nigeria
+31 years old
+The Story
+
+What started as helping friends and family with simple websites has evolved into a passion for creating digital experiences that truly make a difference. Based in Nigeria's capital, I've had the privilege of working with diverse businesses across various industries.
+
+In 2022, I founded Alpha-Link Digital Solutions (ALDS) to bring together my technical skills with strategic thinking. The goal was simple: help businesses not just get online, but thrive online.
+
+2025 marked a significant milestone with my completion of the ALX Software Foundation program. This program sharpened my problem-solving skills and introduced me to modern development methodologies, collaborative workflows, and industry best practices.
+
+Currently pursuing my degree at NOUN, I believe in continuous learning and staying ahead of the rapidly evolving digital landscape.
+
+Read Full Story
+4+ Years Experience
+ALDS Founder
+NOUN Student
+ALX Graduate 2024
+Core Values
+Purpose-Driven
+
+Every project should solve real problems and create meaningful impact for businesses and their customers.
+
+Collaborative
+
+The best solutions emerge from close collaboration with clients, understanding their unique challenges and goals.
+
+Innovation-Focused
+
+Staying current with technology trends to provide modern, future-proof solutions that grow with businesses.
+
+Professional Journey
+2019
+The Beginning
+
+Started freelancing for friends and family, building simple websites and learning the fundamentals of web development.
+
+2020
+Skill Development
+
+Expanded into WordPress development and began understanding client needs beyond just coding.
+
+2021
+SEO Discovery
+
+Discovered the power of SEO and how technical skills could drive real business results for clients.
+
+2022
+Alpha-Link Digital Solutions
+
+Founded ALDS to provide comprehensive digital solutions, combining development with strategic consulting.
+
+2023-24
+Growing Impact
+
+Continuing education at NOUN while building impactful solutions for diverse clients across Nigeria and beyond.
+
+2025
+ALX Foundation Certificate
+
+Completed the prestigious ALX Software Engineering Foundation program, mastering modern development practices and collaboration.
+
+Technical Skills
+HTML5 & CSS3
+95%
+JavaScript
+85%
+WordPress
+90%
+SEO Optimization
+88%
+Responsive Design
+92%
+Digital Marketing
+80%
+Quick Stats
+15+
+Projects Completed
+4+
+Years Experience
+100%
+Client Satisfaction
+24/7
+Learning Mode
+Services & Solutions
+
+Comprehensive digital solutions designed to help your business thrive in the modern marketplace.
+
+Most Popular
+Web Design & Development
+
+Custom, responsive websites built with modern technologies and best practices.
+
+What's Included:
+Mobile-first responsive design
+Custom WordPress development
+Modern HTML5/CSS3/JavaScript
+Performance optimization
+Cross-browser compatibility
+Content Management Systems
+Process:
+1. Discovery & Planning
+2. Design & Prototyping
+3. Development & Testing
+4. Launch & Optimization
+Get Started
+SEO Optimization
+
+Strategic SEO services to improve your search engine rankings and organic visibility.
+
+What's Included:
+Technical SEO audits
+On-page optimization
+Keyword research & strategy
+Local SEO for Nigerian businesses
+Performance monitoring
+Monthly reporting
+Process:
+1. SEO Audit & Analysis
+2. Strategy Development
+3. Implementation
+4. Monitoring & Reporting
+Get Started
+Digital Consulting
+
+Strategic consulting to help businesses navigate their digital transformation journey.
+
+What's Included:
+Digital strategy development
+Technology recommendations
+Process optimization
+Team training & workshops
+Competitor analysis
+Growth planning
+Process:
+1. Business Assessment
+2. Strategy Creation
+3. Implementation Planning
+4. Ongoing Support
+Get Started
+Digital Marketing
+
+Comprehensive digital marketing strategies to grow your online presence and reach.
+
+What's Included:
+Social media strategy
+Content marketing
+Email marketing campaigns
+PPC advertising setup
+Analytics & tracking
+Brand development
+Process:
+1. Market Research
+2. Campaign Strategy
+3. Content Creation
+4. Performance Analysis
+Get Started
+Additional Services
+
+Specialized services to enhance and protect your digital presence
+
+Mobile Optimization
+
+Ensure your website performs perfectly on all mobile devices.
+
+Website Security
+
+Protect your website with robust security measures and monitoring.
+
+Performance Optimization
+
+Speed up your website for better user experience and SEO.
+
+API Integration
+
+Connect your website with third-party services and tools.
+
+Ready to Transform Your Digital Presence?
+
+Let's discuss your project and create a digital solution that drives real results for your business.
+
+Start Your Project
+View Service Guide
+Let's Connect
+
+Ready to start your next project? I'd love to hear about your ideas and how we can bring them to life together.
+
+Send a Message
+
+Fill out the form below and I'll get back to you within 24 hours.
+
+Name *
+Email *
+Subject *
+Message *
+Send Message
+Get in Touch
+
+Multiple ways to reach me for your convenience.
+
+Email
+eyonathaniel@gmail.com
+Phone
++234 (0) 708 112 9997
+Location
+Abuja, Nigeria
+Follow Me
+
+Stay updated with my latest work and insights.
+
+GitHub
+LinkedIn
+Twitter
+Current Availability
+
+I'm currently accepting new projects and would love to hear about yours.
+
+Available for new projects
+What to Expect
+Response within 24 hours
+Free initial consultation
+Detailed project proposal
+Transparent communication
+Nathaniel Eyo
+
+Web Developer & SEO Consultant
+
+Made with
+in Abuja, Nigeria
+React + TypeScript
+Powered by lots of coffee
+
+© 2026 Nathaniel Eyo. All rights reserved. | Alpha-Link Digital Solutions
