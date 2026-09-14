@@ -40,9 +40,13 @@ export default function Work() {
               <div className="absolute inset-0 bg-border/20 group-hover:bg-transparent transition-colors z-10" />
               <div className="absolute inset-0 pattern-dots opacity-20 group-hover:scale-110 transition-transform duration-1000" />
               
-              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 font-serif italic text-2xl text-muted mix-blend-multiply opacity-50 z-0">
-                Project Visual
-              </div>
+              {project.image ? (
+                <img src={project.image} alt={project.title} className="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-1000 z-0" referrerPolicy="no-referrer" />
+              ) : (
+                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 font-serif italic text-2xl text-muted mix-blend-multiply opacity-50 z-0">
+                  Project Visual
+                </div>
+              )}
 
               <div className="absolute bottom-0 left-0 w-full p-6 bg-gradient-to-t from-black/60 to-transparent z-20 flex gap-2">
                 {project.technologies.slice(0,3).map(tech => (

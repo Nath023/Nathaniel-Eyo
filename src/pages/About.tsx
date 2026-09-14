@@ -30,9 +30,7 @@ export default function About() {
             </p>
             <div className="w-full aspect-[3/4] bg-surface rounded-2xl border border-border mt-4 relative overflow-hidden group">
               <div className="absolute inset-0 pattern-grid opacity-30 group-hover:scale-105 transition-transform duration-700" />
-              <div className="absolute inset-0 flex items-center justify-center">
-                <span className="font-serif italic text-2xl text-muted">N.E.</span>
-              </div>
+              <img src="https://i.postimg.cc/02F302dT/2024-10-09-16-30-IMG-2332.jpg" alt="Portrait" className="absolute inset-0 w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-700" referrerPolicy="no-referrer" />
             </div>
           </div>
         </div>

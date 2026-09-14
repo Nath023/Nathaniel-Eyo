@@ -79,8 +79,8 @@ export default function Contact() {
          <div className="absolute inset-0 bg-gradient-to-t from-surface to-transparent" />
          
          <div className="relative z-10 flex flex-col items-center gap-4">
-           <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center shadow-sm border border-border mb-4">
-             <span className="font-serif italic text-2xl">NE</span>
+           <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center shadow-sm border border-border mb-4 overflow-hidden">
+             <img src="https://i.postimg.cc/02F302dT/2024-10-09-16-30-IMG-2332.jpg" alt="Portrait" className="w-full h-full object-cover object-top" referrerPolicy="no-referrer" />
            </div>
            <h2 className="font-serif text-3xl">Nathaniel Eyo</h2>
            <p className="font-mono text-xs uppercase tracking-widest text-muted">Abuja, Nigeria</p>

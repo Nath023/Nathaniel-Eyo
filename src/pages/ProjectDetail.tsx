@@ -56,9 +56,13 @@ export default function ProjectDetail() {
         className="w-full aspect-[16/9] md:aspect-[21/9] bg-surface rounded-none md:rounded-3xl overflow-hidden mt-16 relative -mx-6 md:mx-0 w-[calc(100%+3rem)] md:w-full group"
       >
         <div className="absolute inset-0 pattern-grid opacity-30 group-hover:scale-105 transition-transform duration-1000" />
-        <div className="absolute inset-0 flex items-center justify-center">
-           <span className="font-serif italic text-3xl md:text-5xl text-muted mix-blend-multiply opacity-50">Project Visual</span>
-        </div>
+        {project.image ? (
+           <img src={project.image} alt={project.title} className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000" referrerPolicy="no-referrer" />
+        ) : (
+          <div className="absolute inset-0 flex items-center justify-center">
+             <span className="font-serif italic text-3xl md:text-5xl text-muted mix-blend-multiply opacity-50">Project Visual</span>
+          </div>
+        )}
       </motion.div>
 
       <div className="grid lg:grid-cols-12 gap-16 lg:gap-24 mt-16 md:mt-32 max-w-6xl mx-auto w-full">
@@ -109,9 +113,13 @@ export default function ProjectDetail() {
 
           <div className="w-full aspect-video bg-surface rounded-2xl overflow-hidden relative group">
              <div className="absolute inset-0 pattern-dots opacity-20 group-hover:scale-105 transition-transform duration-1000" />
-             <div className="absolute inset-0 flex items-center justify-center">
-               <span className="font-serif italic text-2xl text-muted mix-blend-multiply opacity-50">Interface Detail</span>
-             </div>
+             {project.secondaryImage ? (
+                <img src={project.secondaryImage} alt={`${project.title} Interface`} className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000" referrerPolicy="no-referrer" />
+             ) : (
+               <div className="absolute inset-0 flex items-center justify-center">
+                 <span className="font-serif italic text-2xl text-muted mix-blend-multiply opacity-50">Interface Detail</span>
+               </div>
+             )}
           </div>
 
           <section className="flex flex-col gap-6">

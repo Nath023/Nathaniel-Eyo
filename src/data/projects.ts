@@ -12,6 +12,8 @@ export interface Project {
   lessonsLearned: string;
   link?: string;
   year: string;
+  image?: string;
+  secondaryImage?: string;
 }
 
 export const projects: Project[] = [
@@ -28,6 +30,8 @@ export const projects: Project[] = [
     outcome: "Delivered a purpose-driven web platform that elevated the business's operational efficiency and field-worker accessibility.",
     lessonsLearned: "Gained deep insights into maritime industry requirements and the critical importance of offline-capable design for mobile users in remote environments.",
     year: "Recent",
+    image: "https://i.postimg.cc/8PW1Q35T/merryhap.png",
+    secondaryImage: "https://images.unsplash.com/photo-1544256718-3bcf237f3974?auto=format&fit=crop&q=80&w=2000",
   },
   {
     slug: "renewme",
@@ -42,6 +46,8 @@ export const projects: Project[] = [
     outcome: "Successfully launched an application that guarantees users never miss a subscription payment again.",
     lessonsLearned: "Mastered the integration of real-time messaging APIs within a React/Node.js architecture while maintaining strict UI performance.",
     year: "Recent",
+    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=2000",
+    secondaryImage: "https://images.unsplash.com/photo-1555421689-491a97ff2040?auto=format&fit=crop&q=80&w=2000",
   },
   {
     slug: "sqz-comms",
@@ -56,6 +62,8 @@ export const projects: Project[] = [
     outcome: "Established a professional, highly visible platform that clearly articulates the company's complex technical service offerings.",
     lessonsLearned: "Learned how to present dense technical services accessibly while maintaining industry authority and user trust.",
     year: "Recent",
+    image: "https://i.postimg.cc/zvrw7fbQ/sqzcomm.png",
+    secondaryImage: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80&w=2000",
   },
   {
     slug: "kalaku-vibes",
@@ -70,6 +78,8 @@ export const projects: Project[] = [
     outcome: "Delivered a vibrant, fast-loading platform that serves as a central hub for artists and event management.",
     lessonsLearned: "Discovered the critical balance of visual appeal and performance, particularly for media-heavy creative industry websites.",
     year: "Recent",
+    image: "https://i.postimg.cc/MHS05GM4/kalakuvibe.png",
+    secondaryImage: "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?auto=format&fit=crop&q=80&w=2000",
   },
   {
     slug: "hubone-consult",
@@ -84,5 +94,7 @@ export const projects: Project[] = [
     outcome: "Launched a secure, authoritative platform that effectively communicates the firm's elite consulting services.",
     lessonsLearned: "Understood how website design choices and security implementations directly impact trust perception in security-sensitive industries.",
     year: "Recent",
+    image: "https://i.postimg.cc/PqWBKCNy/Hubone.png",
+    secondaryImage: "https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&q=80&w=2000",
   }
 ];

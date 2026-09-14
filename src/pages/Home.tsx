@@ -60,14 +60,17 @@ export default function Home() {
             </motion.div>
             
             <motion.div 
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ duration: 1, delay: 0.4 }}
-              className="hidden md:flex justify-end items-end"
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: [0, -15, 0] }}
+              transition={{ 
+                opacity: { duration: 1, delay: 0.4 },
+                y: { duration: 5, repeat: Infinity, ease: "easeInOut", delay: 1 }
+              }}
+              className="hidden md:flex justify-end items-start md:-mt-16 lg:-mt-32 relative z-10"
             >
-              <div className="w-64 h-64 border border-border rounded-full flex items-center justify-center relative overflow-hidden group">
+              <div className="w-64 h-64 border border-border rounded-full flex items-center justify-center relative overflow-hidden group shadow-[0_20px_40px_rgba(0,0,0,0.05)]">
                 <div className="absolute inset-0 pattern-grid opacity-50 group-hover:scale-110 transition-transform duration-1000" />
-                <span className="font-serif italic text-3xl z-10">{profile.identity.name.split(' ')[0]}</span>
+                <img src="https://i.postimg.cc/02F302dT/2024-10-09-16-30-IMG-2332.jpg" alt="Portrait" className="w-full h-full object-cover object-top rounded-full relative z-10" referrerPolicy="no-referrer" />
               </div>
             </motion.div>
           </div>
@@ -76,8 +79,6 @@ export default function Home() {
 
       {/* Selected Work (Asymmetric Grid) */}
       <section className="flex flex-col gap-12 border-t border-border pt-12 relative">
-        <div className="absolute top-0 right-0 w-px h-full bg-border hidden lg:block" />
-        
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6">
           <h2 className="font-serif text-4xl md:text-5xl italic">Selected Work</h2>
           <Link to="/work" className="font-mono text-xs uppercase tracking-widest hover:text-accent transition-colors">View Index &rarr;</Link>
@@ -90,14 +91,22 @@ export default function Home() {
               to={`/projects/${project.slug}`} 
               className={`group flex flex-col gap-6 ${
                 i === 0 ? 'md:col-span-8' : 
-                i === 1 ? 'md:col-span-4 md:mt-32' : 
+                i === 1 ? 'md:col-span-4 md:mt-24' : 
                 i === 2 ? 'md:col-span-5' : 
-                'md:col-span-7 md:-mt-24'
+                'md:col-span-6 md:col-start-7'
               }`}
             >
-              <div className="w-full overflow-hidden bg-surface rounded-2xl relative aspect-[4/3] md:aspect-auto md:h-[400px]">
+              <div className={`w-full overflow-hidden bg-surface rounded-2xl relative ${
+                i === 0 ? 'aspect-[16/9]' :
+                i === 1 ? 'aspect-[3/4]' :
+                i === 2 ? 'aspect-square' :
+                'aspect-[4/3]'
+              }`}>
                 <div className="absolute inset-0 bg-border/20 group-hover:bg-transparent transition-colors z-10" />
                 <div className="absolute inset-0 pattern-grid opacity-30 group-hover:scale-105 transition-transform duration-700" />
+                {project.image && (
+                  <img src={project.image} alt={project.title} className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" referrerPolicy="no-referrer" />
+                )}
                 <div className="absolute top-4 left-4 z-20 flex gap-2">
                   {project.technologies.slice(0,2).map(tech => (
                     <span key={tech} className="bg-white/90 backdrop-blur text-ink text-[10px] font-mono px-2 py-1 rounded-sm uppercase tracking-wider">{tech}</span>
