@@ -21,6 +21,8 @@ export const articles: Article[] = [
 
 Starting a digital business taught me...
 
+![My first office setup](https://images.unsplash.com/photo-1497215728101-856f4ea42174)
+
 ## The first lesson
 
 Your content goes here.
