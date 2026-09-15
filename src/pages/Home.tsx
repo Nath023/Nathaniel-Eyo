@@ -1,5 +1,6 @@
+import React from "react";
 import { Link } from "react-router-dom";
-import { motion } from "motion/react";
+import { motion, useMotionValue, useSpring, useTransform } from "motion/react";
 import { ArrowUpRight } from "lucide-react";
 import { SEO } from "../components/SEO";
 import { projects } from "../data/projects";
@@ -7,6 +8,33 @@ import { articles } from "../data/writing";
 import { profile } from "../data/profile";
 
 export default function Home() {
+  // Tilt effect for polaroid
+  const x = useMotionValue(0);
+  const y = useMotionValue(0);
+
+  const mouseXSpring = useSpring(x, { stiffness: 300, damping: 30 });
+  const mouseYSpring = useSpring(y, { stiffness: 300, damping: 30 });
+
+  const rotateX = useTransform(mouseYSpring, [-0.5, 0.5], ["15deg", "-15deg"]);
+  const rotateY = useTransform(mouseXSpring, [-0.5, 0.5], ["-15deg", "15deg"]);
+
+  const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
+    const rect = e.currentTarget.getBoundingClientRect();
+    const width = rect.width;
+    const height = rect.height;
+    const mouseX = e.clientX - rect.left;
+    const mouseY = e.clientY - rect.top;
+    const xPct = mouseX / width - 0.5;
+    const yPct = mouseY / height - 0.5;
+    x.set(xPct);
+    y.set(yPct);
+  };
+
+  const handleMouseLeave = () => {
+    x.set(0);
+    y.set(0);
+  };
+
   return (
     <motion.div 
       initial={{ opacity: 0 }}
@@ -31,7 +59,7 @@ export default function Home() {
             initial={{ y: 30, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
-            className="font-serif text-6xl sm:text-7xl md:text-9xl lg:text-[10rem] italic tracking-tight leading-[0.85] text-ink relative"
+            className="font-sans font-medium text-6xl sm:text-7xl md:text-9xl lg:text-[10rem] tracking-tighter leading-[0.85] text-ink relative"
           >
             Digital<br />
             <span className="ml-8 sm:ml-16 md:ml-32">builder.</span>
@@ -70,17 +98,23 @@ export default function Home() {
                 y: { duration: 6, repeat: Infinity, ease: "easeInOut", delay: 1.5 }
               }}
               className="hidden md:flex md:col-span-4 md:col-start-9 justify-end items-start relative z-10 -mt-16"
+              style={{ perspective: 1000 }}
             >
-              <div className="w-64 h-[22rem] bg-surface p-2 pb-12 shadow-[0_30px_60px_rgba(0,0,0,0.12)] rotate-2 group relative">
-                <div className="absolute inset-0 border border-black/5" />
-                <div className="w-full h-full overflow-hidden bg-border relative">
+              <motion.div 
+                onMouseMove={handleMouseMove}
+                onMouseLeave={handleMouseLeave}
+                style={{ rotateX, rotateY, transformStyle: "preserve-3d" }}
+                className="w-64 h-[22rem] bg-surface p-2 pb-12 shadow-[0_30px_60px_rgba(0,0,0,0.12)] rotate-2 group relative cursor-pointer"
+              >
+                <div className="absolute inset-0 border border-black/5" style={{ transform: "translateZ(10px)" }} />
+                <div className="w-full h-full overflow-hidden bg-border relative" style={{ transform: "translateZ(20px)" }}>
                    <div className="absolute inset-0 pattern-grid opacity-30 mix-blend-multiply group-hover:scale-110 transition-transform duration-1000 z-10" />
-                   <img src="https://i.postimg.cc/02F302dT/2024-10-09-16-30-IMG-2332.jpg" alt="Portrait" className="w-full h-full object-cover object-top grayscale group-hover:grayscale-0 transition-all duration-700 relative z-0" referrerPolicy="no-referrer" />
+                   <img src="https://images.unsplash.com/photo-1531384441138-2736e62e0919?auto=format&fit=crop&q=80&w=800" alt="Creative Technologist" className="w-full h-full object-cover object-top grayscale group-hover:grayscale-0 transition-all duration-700 relative z-0" referrerPolicy="no-referrer" />
                 </div>
-                <div className="absolute bottom-4 left-0 w-full text-center">
-                  <span className="font-serif italic text-muted text-lg">Nathaniel Eyo</span>
+                <div className="absolute bottom-4 left-0 w-full text-center" style={{ transform: "translateZ(30px)" }}>
+                  <span className="font-serif italic text-muted text-lg">Digital Space</span>
                 </div>
-              </div>
+              </motion.div>
             </motion.div>
           </div>
         </div>
@@ -170,15 +204,15 @@ export default function Home() {
       </section>
 
       {/* Narrative Intro */}
-      <section className="bg-ink text-surface py-24 md:py-48 px-8 md:px-16 w-screen relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] flex flex-col items-center text-center gap-12 mt-32 overflow-hidden">
-        <div className="absolute inset-0 pattern-dots opacity-[0.05] pointer-events-none" />
-        <span className="font-mono text-xs tracking-widest text-surface/50 uppercase relative z-10">Background</span>
-        <h2 className="font-serif text-4xl md:text-6xl lg:text-7xl max-w-5xl leading-[1.1] relative z-10 text-balance">
+      <section className="bg-ink text-white py-20 md:py-32 px-6 md:px-16 rounded-[2rem] md:rounded-[3rem] flex flex-col items-center text-center gap-8 md:gap-12 mt-24 mb-8 relative overflow-hidden w-full max-w-full">
+        <div className="absolute inset-0 pattern-dots opacity-10 pointer-events-none" />
+        <span className="font-mono text-xs tracking-widest text-white/50 uppercase relative z-10">Background</span>
+        <h2 className="font-serif text-3xl md:text-5xl lg:text-6xl text-white max-w-4xl leading-[1.2] relative z-10">
           "I combine technical engineering with strategic business thinking to build tools that <i className="text-accent">actually work</i> for people."
         </h2>
         <Link 
           to="/about" 
-          className="font-mono text-xs uppercase tracking-widest border border-surface/20 text-surface px-10 py-5 rounded-full hover:bg-surface hover:text-ink transition-colors relative z-10 mt-8"
+          className="font-mono text-xs uppercase tracking-widest border border-white/20 text-white px-8 py-4 rounded-full hover:bg-white hover:text-ink transition-colors relative z-10 mt-4 md:mt-8"
         >
           Read my story
         </Link>
