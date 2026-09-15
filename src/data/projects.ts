@@ -46,7 +46,7 @@ export const projects: Project[] = [
     outcome: "Successfully launched an application that guarantees users never miss a subscription payment again.",
     lessonsLearned: "Mastered the integration of real-time messaging APIs within a React/Node.js architecture while maintaining strict UI performance.",
     year: "Recent",
-    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=2000",
+    image: "https://i.postimg.cc/RZtjxYxw/renewme.png",
     secondaryImage: "https://images.unsplash.com/photo-1555421689-491a97ff2040?auto=format&fit=crop&q=80&w=2000",
   },
   {

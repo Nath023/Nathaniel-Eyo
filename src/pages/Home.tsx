@@ -107,9 +107,9 @@ export default function Home() {
                 className="w-64 h-[22rem] bg-surface p-2 pb-12 shadow-[0_30px_60px_rgba(0,0,0,0.12)] rotate-2 group relative cursor-pointer"
               >
                 <div className="absolute inset-0 border border-black/5" style={{ transform: "translateZ(10px)" }} />
-                <div className="w-full h-full overflow-hidden bg-border relative" style={{ transform: "translateZ(20px)" }}>
+                <div className="w-full h-full overflow-hidden bg-surface relative" style={{ transform: "translateZ(20px)" }}>
                    <div className="absolute inset-0 pattern-grid opacity-30 mix-blend-multiply group-hover:scale-110 transition-transform duration-1000 z-10" />
-                   <img src="https://images.unsplash.com/photo-1531384441138-2736e62e0919?auto=format&fit=crop&q=80&w=800" alt="Creative Technologist" className="w-full h-full object-cover object-top grayscale group-hover:grayscale-0 transition-all duration-700 relative z-0" referrerPolicy="no-referrer" />
+                   <img src="https://i.postimg.cc/2SPr4vCp/Chat-GPT-Image-Sep-15-2026-11-38-28-PM.png" alt="Creative Technologist" className="w-full h-full object-cover object-center grayscale group-hover:grayscale-0 transition-all duration-700 relative z-0" referrerPolicy="no-referrer" />
                 </div>
                 <div className="absolute bottom-4 left-0 w-full text-center" style={{ transform: "translateZ(30px)" }}>
                   <span className="font-serif italic text-muted text-lg">Digital Space</span>
