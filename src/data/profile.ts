@@ -16,9 +16,9 @@ export const profile = {
     responseGuarantee: "Response within 24 hours"
   },
   socials: {
-    linkedin: "https://linkedin.com/in/nathaniel-eyo", 
-    twitter: "https://twitter.com/nathaniel_eyo",
-    github: "https://github.com/nathaniel-eyo" 
+    linkedin: "https://www.linkedin.com/in/nathanieleyo/",
+    twitter: "https://twitter.com/macwytt",
+    github: "https://github.com/Nath023" 
   },
   biography: {
     short: "I help businesses and individuals establish a commanding digital presence. By combining modern web technologies with strategic thinking, I deliver solutions that are not just visually appealing, but purpose-driven, performant and scalable. From custom WordPress systems to complex React applications.",

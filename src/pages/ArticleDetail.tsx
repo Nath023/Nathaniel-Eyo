@@ -33,23 +33,30 @@ export default function ArticleDetail() {
           <ArrowLeft className="w-4 h-4 group-hover:-translate-x-1 transition-transform" /> Back to Writing
         </Link>
         
-        <header className="flex flex-col gap-8 pb-12 border-b border-border">
-          <div className="flex flex-wrap items-center gap-4 text-xs font-mono tracking-widest uppercase text-muted">
+        <header className="flex flex-col gap-6 md:gap-8 pb-12 border-b border-border mt-4 md:mt-8">
+          <div className="flex flex-wrap items-center gap-3 md:gap-4 text-xs font-mono tracking-widest uppercase text-muted">
             <span className="text-accent">{article.category}</span>
             <span>/</span>
             <span>{article.date}</span>
             <span>/</span>
             <span>{article.readingTime}</span>
           </div>
-          <h1 className="font-serif text-5xl md:text-6xl lg:text-7xl italic leading-tight">{article.title}</h1>
+          <h1 className="font-sans font-medium text-4xl sm:text-5xl md:text-6xl lg:text-7xl tracking-tighter leading-[1.1] text-ink text-balance">{article.title}</h1>
         </header>
 
-        <div className="prose prose-lg max-w-none text-ink
-          prose-headings:font-serif prose-headings:font-normal prose-headings:text-ink prose-h2:text-4xl prose-h3:text-2xl prose-h2:italic
-          prose-p:leading-relaxed prose-p:text-lg prose-a:text-accent prose-a:no-underline hover:prose-a:underline
-          prose-code:font-mono prose-code:text-sm prose-code:bg-surface prose-code:px-1 prose-code:rounded
-          prose-img:rounded-2xl prose-img:border prose-img:border-border prose-img:w-full prose-img:my-12
-          prose-strong:font-semibold prose-strong:text-ink prose-blockquote:border-accent prose-blockquote:font-serif prose-blockquote:italic"
+        <div className="prose max-w-none text-ink font-sans w-full
+          prose-h1:hidden
+          prose-headings:font-sans prose-headings:font-medium prose-headings:tracking-tight prose-headings:text-ink 
+          prose-h2:text-2xl md:prose-h2:text-3xl prose-h2:mt-16 prose-h2:mb-6 
+          prose-h3:text-xl md:prose-h3:text-2xl prose-h3:mt-10 prose-h3:mb-4
+          prose-p:leading-[1.8] prose-p:text-[1.05rem] md:prose-p:text-[1.125rem] prose-p:mb-8 prose-p:text-ink/80
+          prose-li:text-[1.05rem] md:prose-li:text-[1.125rem] prose-li:text-ink/80 prose-li:leading-[1.8]
+          prose-ul:list-disc prose-ul:pl-6 prose-ul:mb-8 prose-ol:list-decimal prose-ol:pl-6 prose-ol:mb-8
+          prose-a:text-accent prose-a:underline prose-a:underline-offset-4 hover:prose-a:text-ink transition-colors
+          prose-code:font-mono prose-code:text-[0.85em] prose-code:bg-surface prose-code:px-1.5 prose-code:py-0.5 prose-code:rounded-md prose-code:text-ink
+          prose-img:rounded-2xl md:prose-img:rounded-3xl prose-img:border prose-img:border-border prose-img:w-full prose-img:my-12 md:prose-img:my-16 prose-img:shadow-sm
+          prose-strong:font-medium prose-strong:text-ink 
+          prose-blockquote:border-l-4 prose-blockquote:border-accent prose-blockquote:pl-6 prose-blockquote:font-serif prose-blockquote:italic prose-blockquote:text-xl md:prose-blockquote:text-2xl prose-blockquote:text-ink/70"
         >
           <Markdown>{article.content}</Markdown>
         </div>
