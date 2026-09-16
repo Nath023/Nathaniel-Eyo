@@ -46,9 +46,9 @@ export default function ArticleDetail() {
 
         <div className="prose max-w-none text-ink font-sans w-full
           prose-h1:hidden
-          prose-headings:font-sans prose-headings:font-medium prose-headings:tracking-tight prose-headings:text-ink 
-          prose-h2:text-2xl md:prose-h2:text-3xl prose-h2:mt-16 prose-h2:mb-6 
-          prose-h3:text-xl md:prose-h3:text-2xl prose-h3:mt-10 prose-h3:mb-4
+          prose-headings:font-sans prose-headings:font-semibold prose-headings:tracking-tighter prose-headings:text-ink 
+          prose-h2:text-3xl md:prose-h2:text-4xl prose-h2:mt-16 prose-h2:mb-8 
+          prose-h3:text-2xl md:prose-h3:text-3xl prose-h3:mt-12 prose-h3:mb-6
           prose-p:leading-[1.8] prose-p:text-[1.05rem] md:prose-p:text-[1.125rem] prose-p:mb-8 prose-p:text-ink/80
           prose-li:text-[1.05rem] md:prose-li:text-[1.125rem] prose-li:text-ink/80 prose-li:leading-[1.8]
           prose-ul:list-disc prose-ul:pl-6 prose-ul:mb-8 prose-ol:list-decimal prose-ol:pl-6 prose-ol:mb-8

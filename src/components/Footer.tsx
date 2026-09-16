@@ -42,9 +42,13 @@ export function Footer() {
         </div>
         
         <div className="flex flex-col md:flex-row justify-between items-center gap-6 pt-8 border-t border-border">
-          <div className="flex gap-6 text-sm font-mono text-muted">
-            <NavLink to="/cv" className="hover:text-accent transition-colors">CV / Resume</NavLink>
-            <NavLink to="/uses" className="hover:text-accent transition-colors">Uses</NavLink>
+          <div className="flex gap-6 text-sm font-mono">
+            <NavLink to="/cv" className="text-accent hover:text-ink transition-colors font-bold uppercase tracking-wider flex items-center gap-1 group">
+              CV / Resume <ArrowUpRight className="w-3 h-3 opacity-0 -ml-2 group-hover:opacity-100 group-hover:ml-0 transition-all" />
+            </NavLink>
+            <NavLink to="/uses" className="text-accent hover:text-ink transition-colors font-bold uppercase tracking-wider flex items-center gap-1 group">
+              Uses <ArrowUpRight className="w-3 h-3 opacity-0 -ml-2 group-hover:opacity-100 group-hover:ml-0 transition-all" />
+            </NavLink>
           </div>
           <p className="text-xs font-mono text-muted">
             &copy; {new Date().getFullYear()} {profile.identity.name}. All rights reserved.
